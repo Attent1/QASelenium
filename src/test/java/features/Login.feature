@@ -2,7 +2,7 @@
 
   Funcionalidade: Login
 
-    Cenario: login com sucesso
-    Dado que estou na tela de login
-    Quando faco login com credenciais validas
-    Entao vejo a tela de "Select Flight"
+    Cenário: Login com credenciais validas
+      Dado que estou na tela de login
+      Quando entro com credenciais validas
+      Entao vejo a tela Select Flight
