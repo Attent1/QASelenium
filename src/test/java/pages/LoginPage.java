@@ -10,6 +10,8 @@ public class LoginPage extends BasePage {
 
     public final By btnSignIn = By.name("commit");
 
+    public final By tvInvalidCredentials = By.id("flash_alert");
+
     public void isOnLoginPage(){
         driver.get("https://travel.agileway.net/login");
         isVisible(btnSignIn);

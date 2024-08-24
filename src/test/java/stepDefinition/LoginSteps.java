@@ -28,4 +28,15 @@ public class LoginSteps extends BasePage {
     public void vejo_a_tela_select_flight() {
         isVisible(selectFlight.tvSignedIn);
     }
+
+    @Quando("entro com credenciais invalidas")
+    public void entro_com_credenciais_invalidas() {
+        fillInput(login.etUserName, "agileway");
+        fillInput(login.etUserPassword, "errado");
+        click(login.btnSignIn);
+    }
+    @Entao("vejo a mensagem Invalid email or password")
+    public void vejo_a_mensagem_invalid_email_or_password() {
+        isVisible(login.tvInvalidCredentials);
+    }
 }
